@@ -26,4 +26,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getGenderAttribute($gender)
+    {
+        return $gender == 1 ? "男" : "女";
+    }
 }

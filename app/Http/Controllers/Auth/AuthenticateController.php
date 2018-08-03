@@ -23,6 +23,7 @@ class AuthenticateController extends LoginController
             'scope'	        => [
                 'info-username.read',
                 'info-name.read',
+                'info-detail.read',
             ]
         ]);
 
@@ -34,6 +35,8 @@ class AuthenticateController extends LoginController
             $user = User::create([
                 'username' => $query_user->getUsername(),
                 'name' => $query_user->getName(),
+                'birthday' => $query_user->getBirthday(),
+                'gender' => $query_user->getGender(),
             ]);
         } else {
             $user = $exist_user;
