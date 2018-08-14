@@ -25,7 +25,7 @@ class ApplicantRequest extends FormRequest
     {
         return [
             'name' => 'required|max:32',
-            'gender' => 'required|boolean',
+            'gender' => 'required|gender',
             'birthday' => 'required|date_format:Y-m-d',
             'cellphone' => 'required|cellphone',
             'college' => 'required|max:16',
@@ -45,7 +45,7 @@ class ApplicantRequest extends FormRequest
             'name.required' => '姓名为必填字段',
             'name.max' => '姓名输入过长',
             'gender.required' => '性别为必填字段',
-            'gender.boolean' => '性格输入格式有误',
+            'gender.gender' => '性格输入格式有误',
             'birthday.required' => '出生日期为必填字段',
             'birthday.date_format' => '出生日期输入格式有误',
             'cellphone.required' => '手机号码为必填字段',

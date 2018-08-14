@@ -15,8 +15,8 @@
 Route::get('/', 'PagesController@root')->name('root');
 
 /** 认证路由 */
-Route::get('login','Auth/AuthenticateController@login')->name('login');
-Route::post('logout','Auth/AuthenticateController@logout')->name('logout');
+Route::get('login','Auth\AuthenticateController@login')->name('login');
+Route::post('logout','Auth\AuthenticateController@logout')->name('logout');
 
 /** 资源路由 */
 Route::resource('applicant', 'ApplicantsController');

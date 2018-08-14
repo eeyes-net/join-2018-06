@@ -9,13 +9,15 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $dates = ['birthday','created_at','updated_at'];
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','username','gender','birthday',
     ];
 
     /**
@@ -26,9 +28,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function getGenderAttribute($gender)
-    {
-        return $gender == 1 ? "男" : "女";
-    }
 }

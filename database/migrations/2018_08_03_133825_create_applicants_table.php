@@ -16,7 +16,7 @@ class CreateApplicantsTable extends Migration
         Schema::create('applicants', function (Blueprint $table) {
             $table->increments('id');
             $table->text('name');
-            $table->boolean('gender');
+            $table->string('gender');
             $table->timestamp('birthday');
             $table->text('cellphone');
             $table->text('college');
