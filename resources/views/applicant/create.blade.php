@@ -33,19 +33,38 @@
         </div>
         <div>
             <label for="first">第一志愿：</label>
-            <input id="first" type="text" name="first" value="{{ old('first') }}">
+            <select name="first" id="first">
+                @foreach($departments as $department)
+                    <option value="{{ $department->name }}">{{ $department->name }}</option>
+                @endforeach
+            </select>
+            {{--<input id="first" type="text" name="first" value="{{ old('first') }}">--}}
         </div>
         <div>
             <label for="second">第二志愿：</label>
-            <input id="second" type="text" name="second" value="{{ old('second') }}">
+            <select name="second" id="second">
+                @foreach($departments as $department)
+                    <option value="{{ $department->name }}">{{ $department->name }}</option>
+                @endforeach
+            </select>
+            {{--<input id="second" type="text" name="second" value="{{ old('second') }}">--}}
         </div>
         <div>
             <label for="third">第三志愿：</label>
-            <input id="third" type="text" name="third" value="{{ old('third') }}">
+            <select name="third" id="third">
+                @foreach($departments as $department)
+                    <option value="{{ $department->name }}">{{ $department->name }}</option>
+                @endforeach
+            </select>
+            {{--<input id="third" type="text" name="third" value="{{ old('third') }}">--}}
         </div>
         <div>
             <label for="method">了解途径：</label>
-            <input id="method" type="text" name="method" value="{{ old('method') }}">
+            <select name="method" id="method">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
         </div>
         <div>
             <label for="wanna_say">个人陈述：</label>

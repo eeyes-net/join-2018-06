@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Applicant;
 use App\Http\Requests\ApplicantRequest;
 use App\Http\Controllers\Controller;
+use App\Models\Department;
 
 class ApplicantsController extends Controller
 {
@@ -20,7 +21,8 @@ class ApplicantsController extends Controller
     
     public function create()
     {
-        return view('applicant.create');
+        $departments = Department::all();
+        return view('applicant.create', compact('departments'));
     }
 
     public function store(ApplicantRequest $request)

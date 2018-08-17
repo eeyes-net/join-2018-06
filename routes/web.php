@@ -20,3 +20,6 @@ Route::post('logout','Auth\AuthenticateController@logout')->name('logout');
 
 /** 资源路由 */
 Route::resource('applicant', 'ApplicantsController');
+Route::resource('department','DepartmentsController',['except' => 'show']);
+Route::get('department/{department}/{name?}','DepartmentsController@show')
+    ->name('department.show');
