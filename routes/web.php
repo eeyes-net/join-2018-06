@@ -19,7 +19,6 @@ Route::get('login','Auth\AuthenticateController@login')->name('login');
 Route::post('logout','Auth\AuthenticateController@logout')->name('logout');
 
 /** 资源路由 */
-Route::resource('applicant', 'ApplicantsController');
+Route::resource('applicant', 'ApplicantsController',['except' => ['edit','update','destroy']]);
 Route::resource('department','DepartmentsController',['except' => 'show']);
-Route::get('department/{department}/{name?}','DepartmentsController@show')
-    ->name('department.show');
+Route::get('department/{department}/{name?}','DepartmentsController@show')->name('department.show');

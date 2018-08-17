@@ -14,12 +14,20 @@ class DepartmentsController extends Controller
         ]);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         $departments = Department::all();
         return view('department.index', compact('departments'));
     }
 
+    /**
+     * @param Department $department
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
+     */
     public function show(Department $department, Request $request)
     {
         if ($department->name != $request->name)
@@ -30,11 +38,18 @@ class DepartmentsController extends Controller
         return view('department.show', compact('department'));
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function create()
     {
         return view('department.create');
     }
 
+    /**
+     * @param Request $request
+     * @return string
+     */
     public function store(Request $request)
     {
         $this->validate($request,[
@@ -46,11 +61,20 @@ class DepartmentsController extends Controller
         return route('department.show',[$department]);
     }
 
+    /**
+     * @param Department $department
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function edit(Department $department)
     {
         return view('department.edit', compact('department'));
     }
 
+    /**
+     * @param Department $department
+     * @param Request $request
+     * @return string
+     */
     public function update(Department $department, Request $request)
     {
         $this->validate($request,[
@@ -62,6 +86,11 @@ class DepartmentsController extends Controller
         return route('department.show',[$department]);
     }
 
+    /**
+     * @param Department $department
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
+     */
     public function destroy(Department $department)
     {
         $department->delete();
