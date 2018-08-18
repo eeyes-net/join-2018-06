@@ -13,6 +13,7 @@
 
 /** 页面路由 */
 Route::get('/', 'PagesController@root')->name('root');
+Route::get('admin','PagesController@admin')->name('admin');
 
 /** 认证路由 */
 Route::get('login','Auth\AuthenticateController@login')->name('login');

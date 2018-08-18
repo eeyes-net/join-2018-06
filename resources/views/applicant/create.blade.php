@@ -35,7 +35,7 @@
             <label for="first">第一志愿：</label>
             <select name="first" id="first">
                 @foreach($departments as $department)
-                    <option value="{{ $department->name }}">{{ $department->name }}</option>
+                    <option value="{{ $department->id }}">{{ $department->name }}</option>
                 @endforeach
             </select>
             {{--<input id="first" type="text" name="first" value="{{ old('first') }}">--}}
@@ -44,7 +44,7 @@
             <label for="second">第二志愿：</label>
             <select name="second" id="second">
                 @foreach($departments as $department)
-                    <option value="{{ $department->name }}">{{ $department->name }}</option>
+                    <option value="{{ $department->id }}">{{ $department->name }}</option>
                 @endforeach
             </select>
             {{--<input id="second" type="text" name="second" value="{{ old('second') }}">--}}
@@ -53,7 +53,7 @@
             <label for="third">第三志愿：</label>
             <select name="third" id="third">
                 @foreach($departments as $department)
-                    <option value="{{ $department->name }}">{{ $department->name }}</option>
+                    <option value="{{ $department->id }}">{{ $department->name }}</option>
                 @endforeach
             </select>
             {{--<input id="third" type="text" name="third" value="{{ old('third') }}">--}}

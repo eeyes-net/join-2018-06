@@ -3,17 +3,18 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\UnauthorizedException;
 
 class IsAdministrator
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
      * @return mixed
+     * @throws AuthorizationException
      */
     public function handle($request, Closure $next)
     {
@@ -21,6 +22,6 @@ class IsAdministrator
         {
             return $next($request);
         }
-        throw new UnauthorizedException("您不是管理员");
+        throw new AuthorizationException("您不是管理员");
     }
 }
