@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('styles')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.min.css">
 <style>
+.title {
+    text-align: center;
+    color: #008aff;
+}
 .field label {
     margin: 20px 0 0;
 }
@@ -46,7 +51,7 @@
 @section('content')
     <div class="panel panel-default">
         <div class="panel-heading">
-
+            <h1 class="title">e瞳网招新表</h1>
         </div>
         <div class="panel-body">
             <form action="{{ route('applicant.store') }}" method="post">
@@ -68,6 +73,10 @@
                     </div>
                     <div class="field">
                         <label for="birthday">出生日期：</label>
+                        <div class="input-append date" id="datetimepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                            <input class="span2" size="16" type="text" value="12-02-2012">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
                         <input class="form-control" id="birthday" type="text" name="birthday" @auth value="{{ Auth::user()->birthday->toDateString() }}" @endauth>
                     </div>
                     <div class="field">
@@ -139,6 +148,8 @@
 @endsection
 
 @section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
 <script>
 (function() {
 
@@ -169,9 +180,12 @@ function initData() {
     }
 }
 
+
 initData()
 
 })()
+
+$('#datetimepicker').datepicker({})
 
 </script>
 @endsection
