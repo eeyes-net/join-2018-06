@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','首页')
+@section('title','e瞳网2018招新')
 
 @section('styles')
 <style>
@@ -14,5 +14,5 @@ body,
 @endsection
 
 @section('content')
-<home></home>
+<temp-home></temp-home>
 @endsection

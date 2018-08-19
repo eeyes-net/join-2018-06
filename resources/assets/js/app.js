@@ -19,7 +19,8 @@ Vue.use(VueTouch, { name: 'v-touch' });
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('home', require('./views/Home.vue'));
+// Vue.component('home', require('./views/Home.vue'));
+Vue.component('temp-home', require('./views/TempHome.vue'));
 
 const app = new Vue({
     el: '#app'

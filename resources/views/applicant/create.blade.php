@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','e瞳网2018招新报名表')
 
 @section('styles')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.min.css">
