@@ -9,6 +9,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+const VueTouch = require('vue-touch');
+Vue.use(VueTouch, { name: 'v-touch' });
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -16,6 +19,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('home', require('./views/Home.vue'));
 
 const app = new Vue({
     el: '#app'

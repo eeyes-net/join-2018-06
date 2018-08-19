@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -15,14 +16,7 @@
 </head>
 <body>
     <div id="app" class="{{ route_class() }}">
-        @include('layouts._header')
-
-        <div class="container">
-            @include('layouts._messages')
-            @yield('content')
-        </div>
-
-        @include('layouts._footer')
+        @yield('content')
     </div>
 
     <!-- Scripts -->
