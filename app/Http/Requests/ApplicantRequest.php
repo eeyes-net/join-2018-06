@@ -31,9 +31,9 @@ class ApplicantRequest extends FormRequest
             'college' => 'required|max:16',
             'class' => 'required|max:32',
             'qq' => 'required|max:16',
-            'first' => 'required|max:16',
-            'second' => 'required|max:16',
-            'third' => 'required|max:16',
+            'first' => 'required',
+            'second' => 'required',
+            'third' => 'required',
             'method' => 'required|max:20',
             'wanna_say' => 'max:300'
         ];

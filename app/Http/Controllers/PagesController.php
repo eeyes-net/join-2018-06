@@ -15,4 +15,14 @@ class PagesController extends Controller
     {
         return view('pages.root');
     }
+
+    /**
+     * 返回后台页
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function admin()
+    {
+        return view('pages.admin');
+    }
 }
