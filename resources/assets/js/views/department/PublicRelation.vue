@@ -97,8 +97,6 @@ export default {
         background-size: auto 100%;
     }
     // 里面用来显示内容
-    // $intro-outter-height: 220px;
-    // $intro-padding: 5px;
     .intro-card {
         position: relative;
         margin: 5px auto;
