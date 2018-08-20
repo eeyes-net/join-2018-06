@@ -5,7 +5,7 @@
         </div>
         <div class="entrance-container">
             <img src="/imgs/home/logo.png" alt="e瞳网logo">
-            <HomeButton :img="0" color="#da6f3a" text="报名入口"></HomeButton>
+            <HomeButton :img="0" color="#da6f3a" text="报名入口" @click="submit"></HomeButton>
         </div>
     </div>
 </template>
@@ -35,38 +35,44 @@ export default {
                         src: '/videos/home_eeyes_intro.webm'
                     },
                 ],
+                notSupportedMessage: '您的设备不支持播放该视频'
             },
+        }
+    },
+    methods: {
+        submit () {
+            location.href = '/applicant/create'
         }
     }
 }
 </script>
 
 <style lang="scss">
-.vjs_video_3-dimensions {
+.video-js {
     width: 300px;
     height: 195px;
     box-shadow: -.6em .6em 0 rgba(#000, .15);
 }
 @media screen and (min-width: 400px) and (min-height: 500px) {
-    .vjs_video_3-dimensions {
+    .video-js {
         width: 400px;
         height: 260px;
     }
 }
 @media screen and (min-width: 500px) and (min-height: 600px) {
-    .vjs_video_3-dimensions {
+    .video-js {
         width: 500px;
         height: 325px;
     }
 }
 @media screen and (min-width: 600px) and (min-height: 700px) {
-    .vjs_video_3-dimensions {
+    .video-js {
         width: 600px;
         height: 390px;
     }
 }
 @media screen and (min-width: 700px) and (min-height: 768px) {
-    .vjs_video_3-dimensions {
+    .video-js {
         width: 700px;
         height: 455px;
     }

@@ -6,6 +6,7 @@
             <div class="part"><router-link :to="part.src2">{{ part.part2 }}</router-link></div>
         </div>
         <div class="content-part">{{ part.info }}</div>
+        <back></back>
     </div>
 </template>
 
@@ -33,6 +34,7 @@
         font-size: 2.8em;
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
+        text-shadow: -2px 2px 2px #fff;
     }
     .part>a{
         color: #000;

@@ -1,6 +1,6 @@
 <template>
-    <div class="media-part container">
-        <h1>新媒体部 <span>招新</span></h1>
+    <div class="media-part">
+        <h1 class="title">新媒体部 <span>招新</span></h1>
         <p class="media-instruc">New Media Department</p>
         <div>
             <p class="text-left">一个有思想的平台</p>
@@ -25,6 +25,7 @@
         <div class="footer text-center">
             <p>二零一八年八月</p>
         </div>
+        <back></back>
     </div>
 </template>
 
@@ -43,6 +44,10 @@
         padding-right: 3em;
         background: url("/imgs/media/bg.jpg") 100px 100px;
         color: #000;
+        .title {
+            margin-top: 0;
+            padding-top: 22px;
+        }
         h1 {
             font-size: 4em;
             @media screen and (max-width: $small) {

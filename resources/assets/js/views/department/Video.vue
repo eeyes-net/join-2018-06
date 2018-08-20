@@ -1,7 +1,13 @@
 <template>
     <div class="video-part">
         <div class="video-content">
-            <p class="time text-center"><span class="red-dot"></span> <span v-if="minute<10">0</span>{{ minute }}&nbsp;:&nbsp;<span v-if="second<10">0</span>{{ second }}</p>
+            <p class="time text-center">
+                <span class="red-dot"></span>
+                <span v-if="minute<10">0</span>
+                <span>{{ minute }}&nbsp;:&nbsp;</span>
+                <span v-if="second<10">0</span>
+                <span>{{ second }}</span>
+            </p>
             <div class="video-body">
                 <h1 class="text-center">影视部</h1>
                 <p>如果你热爱影视</p>
@@ -22,6 +28,7 @@
             <img src="/imgs/video/stop.png" class="img-stop" alt="stop">
             <img src="/imgs/video/pause.png" class="pull-right img-right" alt="pause">
         </div>
+        <back></back>
     </div>
 </template>
 
@@ -69,12 +76,15 @@
             display: inline-block;
             background-color: #FF0000;
             border-radius: 50%;
+            transform: translateY(-5px);
             width: 6px;
             height: 6px;
+            animation: flash 2s step-end 0s infinite;
         }
         .time{
             color: #000;
             font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
         }
         .video-body{
             padding-top: 1em;
@@ -99,9 +109,6 @@
             background-color: #fff;
 
         }
-        .img-right{
-
-        }
     }
     @media screen and (max-width: 345px) {
         .video-content{
@@ -120,4 +127,12 @@
             width: 2.8em;
         }
     }
-    </style>
+    @keyframes flash {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+</style>

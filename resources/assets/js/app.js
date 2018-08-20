@@ -92,6 +92,10 @@ const router = new VueRouter({
     ]
 })
 
+import Back from './components/Back'
+
+Vue.component('back', Back)
+
 new Vue({
     router
 }).$mount('#app');

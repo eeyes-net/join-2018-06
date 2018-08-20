@@ -26,6 +26,7 @@
                 <img class="micro micro-right" src="/imgs/publicrelation/micro_right.png">
             </a>
         </div>
+        <back></back>
     </div>
 </template>
 
@@ -78,6 +79,7 @@ export default {
     height: 100%;
     background: url('/imgs/publicrelation/bg.jpg');
     background-size: 100% 100%;
+    overflow: hidden;
     // 纵向flex布局，以便让stage贴近页面底端
     display: flex;
     flex-direction: column;
