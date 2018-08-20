@@ -6,27 +6,30 @@
             </a>
         </div>
         <section class="main">
-            <h1 class="title">加入我们</h1>
-            <div class="video-box">
-                <video src="videos/home_eeyes_intro.mp4" controls="controls"></video>
-            </div>
-            <p class="products-title">我们的产品</p>
-            <div class="products">
-                <a href="//xjtu.eeyes.net/">
-                    <img src="/imgs/home_xjtu.png" alt="起航交大">
-                </a>
-                <a href="//eux.eeyes.net/">
-                    <img src="/imgs/home_eux.png" alt="前端视觉体验中心">
-                </a>
-                <a href="//down.eeyes.net/">
-                    <img src="/imgs/home_down.png" alt="e快下">
-                </a>
-            </div>
-            <div class="join">
-                <a href="/applicant/create">戳我报名</a>
-            </div>
-            <div class="more">
-                <p class="text">更多内容敬请期待</p>
+            <div class="main-container">
+                <h1 class="title">加入我们</h1>
+                <div class="video-box">
+                    <videoPlayer :options="playerOptions"></videoPlayer>
+                    <!-- <video src="videos/home_eeyes_intro.mp4" controls="controls"></video> -->
+                </div>
+                <p class="products-title">我们的产品</p>
+                <div class="products">
+                    <a href="//xjtu.eeyes.net/">
+                        <img src="/imgs/home_xjtu.png" alt="起航交大">
+                    </a>
+                    <a href="//eux.eeyes.net/">
+                        <img src="/imgs/home_eux.png" alt="前端视觉体验中心">
+                    </a>
+                    <a href="//down.eeyes.net/">
+                        <img src="/imgs/home_down.png" alt="e快下">
+                    </a>
+                </div>
+                <div class="join">
+                    <a href="/applicant/create">戳我报名</a>
+                </div>
+                <div class="more">
+                    <p class="text">更多内容敬请期待</p>
+                </div>
             </div>
         </section>
         <footer class="footer" :class="{ 'footer-hidden': !pageTurned }">
@@ -36,8 +39,31 @@
 </template>
 
 <script>
+// require styles
+import 'video.js/dist/video-js.css'
+
+import { videoPlayer } from 'vue-video-player'
+
 export default {
-    name: 'TempHome'
+    name: 'TempHome',
+    components: {
+        videoPlayer
+    },
+    data() {
+        return {
+            playerOptions: {
+                muted: true,
+                language: 'zh',
+                playbackRates: [0.5, 1.0, 1.5, 2.0],
+                sources: [
+                    {
+                        type: 'video/mp4',
+                        src: '/videos/home_eeyes_intro_480p.mp4'
+                    },
+                ]
+            }
+        }
+    }
 }
 </script>
 
@@ -76,13 +102,18 @@ body {
     height: 3em;
 }
 .main {
-    display: flex;
-    flex-direction: column;
+
     padding-top: 40px;
     background: url('/imgs/home_bg.png') no-repeat;
     background-position-x: 50%;
     background-size: 200% auto;
+}
+.main-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    max-width: 400px;
 }
 .products-title {
     margin: 8px 0 0;
@@ -98,8 +129,8 @@ body {
 }
 /* 产品列表 */
 .products img {
-    width: 25vw;
-    height: 25vw;
+    width: 100%;
+    height: auto;
 }
 .products a {
     margin: 10px 10px;
