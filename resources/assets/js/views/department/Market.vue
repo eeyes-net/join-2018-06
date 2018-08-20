@@ -1,8 +1,8 @@
 <template>
     <div class="market">
         <h2 class="text-center">市场部</h2>
-        <div class="center-block content">
-
+        <div class="center-block content" :class="{ 'content-hidden': contentHidden }">
+            <p v-html="texts[currentFeature]"></p>
         </div>
         <div class="market-features-container">
             <div class="market-features">
@@ -28,19 +28,36 @@
 </template>
 
 <script>
-    export default {
-        name: 'Market',
-        data () {
-          return {
-            currentFeature: 1
-          }
-        },
-        methods: {
-            change (feature) {
-                this.currentFeature = feature
+import { texts } from '../data/market'
+import { sleep } from './util'
+
+export default {
+    name: 'Market',
+    data () {
+        return {
+            currentFeature: 0,
+            changing: false,
+            contentHidden: false,
+            texts
+        }
+    },
+    methods: {
+        async change (feature) {
+            // 保证函数单入
+            if (this.changing) {
+                return;
             }
+            // 切换效果
+            this.changing = true
+            this.contentHidden = true
+            await sleep(500)
+            this.currentFeature = feature
+            this.contentHidden = false
+            await sleep(500)
+            this.changing = false
         }
     }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -64,9 +81,18 @@
         width: 90%;
         max-width: 70vh;
         height: 12em;
+        box-sizing: border-box;
+        padding: 1em;
+        overflow-x: hidden;
+        overflow-y: scroll;
         margin-top: 2em;
         background:rgba(255, 255, 255, 0.65) none repeat scroll 0 0 !important;
-        border-radius: 4px;
+        border-radius: .8em;
+
+        p {
+            transition: opacity .5s;
+            opacity: 1;
+        }
     }
     .market-features-container {
         position: absolute;
@@ -125,5 +151,8 @@
     }
     .market-icon-active + .market-feature-text {
         color: #fff;
+    }
+    .content-hidden p {
+        opacity: 0;
     }
 </style>

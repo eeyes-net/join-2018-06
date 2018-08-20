@@ -31,12 +31,7 @@
 
 <script>
 import { texts } from '../data/publicrelation'
-
-function sleep(time) {
-    return new Promise(resolve => {
-        setTimeout(resolve, time)
-    })
-}
+import { sleep } from './util'
 
 export default {
     name: 'PublicRelation',
@@ -66,10 +61,10 @@ export default {
             this.changing = true
             this.introHidden = true
             this.page = page
-            await sleep(1000)
+            await sleep(500)
             this.textItem = texts.find(item => item.page == page)
             this.introHidden = false
-            await sleep(1000)
+            await sleep(500)
             this.changing = false
         }
     }
@@ -113,8 +108,9 @@ export default {
     .intro-content {
         height: 100%;
         padding-top: 10px;
-        overflow: scroll;
-        transition: opacity 1s;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transition: opacity .5s;
         opacity: 1;
     }
     .intro-hidden {
