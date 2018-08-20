@@ -50,6 +50,7 @@
 @endsection
 
 @section('content')
+    @include('shared._error')
     <div class="panel panel-default">
         <div class="panel-heading">
             <h1 class="title">e瞳网招新表</h1>
@@ -74,11 +75,11 @@
                     </div>
                     <div class="field">
                         <label for="birthday">出生日期：</label>
-                        <div class="input-append date" id="datetimepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-                            <input class="span2" size="16" type="text" value="12-02-2012">
+                        <div class="input-append date" id="datetimepicker" data-date="2000-01-01" data-date-format="yyyy-mm-dd">
+                            <input class="span2" size="16" type="text" name="birthday" value="2000-01-01">
                             <span class="add-on"><i class="icon-th"></i></span>
                         </div>
-                        <input class="form-control" id="birthday" type="text" name="birthday" @auth value="{{ Auth::user()->birthday->toDateString() }}" @endauth>
+                        {{--<input class="form-control" id="birthday" type="text" name="birthday" @auth value="{{ Auth::user()->birthday->toDateString() }}" @endauth>--}}
                     </div>
                     <div class="field">
                         <label for="cellphone">手机号码：</label>
@@ -98,7 +99,7 @@
                     </div>
                     <div class="field">
                         <label for="first">第一志愿：</label>
-                        <select class="custom-select" name="first" id="first">
+                        <select class="custom-select" name="first_id" id="first">
                             <option selected>请选择...</option>
                             @foreach($departments as $department)
                                 <option value="{{ $department->id }}">{{ $department->name }}</option>
@@ -108,7 +109,7 @@
                     </div>
                     <div class="field">
                         <label for="second">第二志愿：</label>
-                        <select class="custom-select" name="second" id="second">
+                        <select class="custom-select" name="second_id" id="second">
                             <option selected>请选择...</option>
                             @foreach($departments as $department)
                                 <option value="{{ $department->id }}">{{ $department->name }}</option>
@@ -118,7 +119,7 @@
                     </div>
                     <div class="field">
                         <label for="third">第三志愿：</label>
-                        <select class="custom-select" name="third" id="third">
+                        <select class="custom-select" name="third_id" id="third">
                             <option selected>请选择...</option>
                             @foreach($departments as $department)
                                 <option value="{{ $department->id }}">{{ $department->name }}</option>
@@ -130,9 +131,10 @@
                         <label for="method">了解途径：</label>
                         <select class="custom-select" name="method" id="method">
                             <option selected>请选择...</option>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
+                            <option value="宣传单">宣传单</option>
+                            <option value="刷楼">学长学姐刷楼</option>
+                            <option value="他人介绍">他人介绍</option>
+                            <option value="他人介绍"></option>
                         </select>
                     </div>
                     <div class="field">

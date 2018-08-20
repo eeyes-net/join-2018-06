@@ -23,8 +23,8 @@ class ApplicantObserver
      */
     public function saved(Applicant $applicant)
     {
-        $applicant->first->applicant_count += 1;
-        $applicant->second->applicant_count += 1;
-        $applicant->third->applicant_count += 1;
+        $applicant->first->increment('applicants_count',1);
+//        $applicant->second->increment('applicants_count',1);
+//        $applicant->third->increment('applicants_count',1);
     }
 }
