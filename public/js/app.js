@@ -1426,6 +1426,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__views_TempHome___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__views_TempHome__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_department_Market__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_department_Market___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__views_department_Market__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__views_department_PublicRelation__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__views_department_PublicRelation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__views_department_PublicRelation__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__views_department_Media__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__views_department_Media___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__views_department_Media__);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -1449,6 +1453,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
 __WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_router__["a" /* default */]);
 
 var router = new __WEBPACK_IMPORTED_MODULE_2_vue_router__["a" /* default */]({
@@ -1460,6 +1466,14 @@ var router = new __WEBPACK_IMPORTED_MODULE_2_vue_router__["a" /* default */]({
         path: '/market',
         component: __WEBPACK_IMPORTED_MODULE_7__views_department_Market___default.a,
         name: 'market'
+    }, {
+        path: '/publicrelation',
+        component: __WEBPACK_IMPORTED_MODULE_8__views_department_PublicRelation___default.a,
+        name: 'publicrelation'
+    }, {
+        path: '/media',
+        component: __WEBPACK_IMPORTED_MODULE_9__views_department_Media___default.a,
+        name: 'media'
     }]
 });
 
@@ -77808,7 +77822,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.market[data-v-a6475dee]{\n    height: 100%;\n    background: #ec971f;\n}\n.market>h2[data-v-a6475dee]{\n    padding-top: 1em;\n    color: #fff;\n}\n", ""]);
 
 // exports
 
@@ -77819,6 +77833,9 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
 //
 //
 //
@@ -77838,9 +77855,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    市场部\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "market" }, [
+      _c("h2", { staticClass: "text-center" }, [_vm._v("市场部")]),
+      _vm._v(" "),
+      _c("div")
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -77849,6 +77877,395 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-a6475dee", module.exports)
   }
 }
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(95)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(97)
+/* template */
+var __vue_template__ = __webpack_require__(98)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\views\\department\\PublicRelation.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4d0982d2", Component.options)
+  } else {
+    hotAPI.reload("data-v-4d0982d2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(96);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(12)("95f491aa", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4d0982d2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PublicRelation.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4d0982d2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PublicRelation.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.public-relation {\n  width: 100%;\n  height: 100%;\n  background: url(\"/imgs/publicrelation/bg.jpg\");\n  background-size: 100% 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.public-relation .intro-container {\n    background: url(\"/imgs/publicrelation/map.png\");\n    background-size: auto 100%;\n}\n.public-relation .intro-card {\n    margin: 5px auto;\n    max-width: 400px;\n    padding: 5px 12px;\n    border-radius: 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    -webkit-box-shadow: 0 0 16px #333;\n            box-shadow: 0 0 16px #333;\n}\n.public-relation .stage {\n    position: relative;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    max-width: 400px;\n    background: url(\"/imgs/publicrelation/podium.png\");\n    background-position: center bottom;\n}\n.public-relation .micro {\n    position: absolute;\n    background-position-y: bottom;\n}\n.public-relation .micro-left {\n    background: url(\"/imgs/publicrelation/micro_left.png\");\n    background-position-x: 0;\n}\n.public-relation .micro-mid {\n    background: url(\"/imgs/publicrelation/micro_mid.png\");\n    background-position-x: 200px;\n}\n.public-relation .micro-right {\n    background: url(\"/imgs/publicrelation/micro_right.png\");\n    background-position-x: 400px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 97 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'PublicRelation'
+});
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "public-relation" }, [
+      _c("h2", { staticClass: "title" }, [
+        _vm._v("2018公关部招新"),
+        _c("br"),
+        _vm._v("新闻发布会")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "intro-container container" }, [
+        _c("div", { staticClass: "intro-card" }, [
+          _c("h4", [_vm._v("简介")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "公共关系部主要负责与学校其它社团、组织进行对接并对它们的线上宣传需求给予支持，促进e瞳网与这些社团组织的关系良好发展。目前，公关部还协助教务处对国际交流项目的线上推广。"
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "stage" }, [
+        _c("div", { staticClass: "micro micro-left" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "micro micro-mid" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "micro micro-right" })
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4d0982d2", module.exports)
+  }
+}
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(104)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(102)
+/* template */
+var __vue_template__ = __webpack_require__(103)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-fa1ca4b2"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\views\\department\\Media.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-fa1ca4b2", Component.options)
+  } else {
+    hotAPI.reload("data-v-fa1ca4b2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 100 */,
+/* 101 */,
+/* 102 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "Media"
+});
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "media-part container" }, [
+      _c("h1", [_vm._v("新媒体部 "), _c("span", [_vm._v("招新")])]),
+      _vm._v(" "),
+      _c("p", { staticClass: "media-instruc" }, [
+        _vm._v("New Media Department")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("p", { staticClass: "text-left" }, [_vm._v("一个有思想的平台")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-right" }, [_vm._v("不止于新闻")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "media-content center-block" }, [
+        _c("div", { staticClass: "media-box" }, [
+          _c("h3", { staticClass: "text-center" }, [_vm._v("简介")]),
+          _vm._v(" "),
+          _c("hr", {
+            staticStyle: {
+              FILTER: "alpha(opacity=100,finishopacity=0,style=3)"
+            },
+            attrs: { width: "80%", size: "3", color: "#000" }
+          }),
+          _vm._v(" "),
+          _c("div", [
+            _c("p", { staticClass: "text-center" }, [
+              _vm._v("新闻媒体部是e瞳网对外的平台")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-center" }, [
+              _vm._v("也是e瞳网的门面")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-center" }, [
+              _vm._v("我们主要负责公众号的运营")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-center" }, [
+              _vm._v("通过文字、影像多维展示学生生活")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-center" }, [
+              _vm._v("的同时为学生提供丰富的信息")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-center" }, [
+              _vm._v("我们着眼于学生的及时需求")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-center" }, [
+              _vm._v("关注交大校内外时事新闻")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-center" }, [
+              _vm._v("探索学校内鲜为人知建筑与故事")
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-fa1ca4b2", module.exports)
+  }
+}
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(105);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(12)("f80977de", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fa1ca4b2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Media.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fa1ca4b2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Media.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.media-part[data-v-fa1ca4b2] {\n  height: 100%;\n  padding-left: 3em;\n  padding-right: 3em;\n  background: url(\"/imgs/media/media.png\");\n}\n.media-part h1[data-v-fa1ca4b2] {\n    font-size: 4em;\n}\n.media-part h1 span[data-v-fa1ca4b2] {\n      font-size: 0.3em;\n      -webkit-writing-mode: vertical-rl;\n      -ms-writing-mode: tb-rl;\n          writing-mode: vertical-rl;\n}\n.media-part div > p[data-v-fa1ca4b2] {\n    margin-bottom: 0;\n    padding-right: 1em;\n}\n.media-instruc[data-v-fa1ca4b2] {\n  font-size: 1.7em;\n}\n.media-content[data-v-fa1ca4b2] {\n  margin-top: 1.2em;\n  border: 1px solid #000;\n  padding: 12px;\n}\n.media-content .media-box[data-v-fa1ca4b2] {\n    border: 1px solid #000;\n}\n.media-content .media-box div[data-v-fa1ca4b2] {\n      padding-bottom: 2em;\n}\n.media-content .media-box div p[data-v-fa1ca4b2] {\n        margin-bottom: 6px;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

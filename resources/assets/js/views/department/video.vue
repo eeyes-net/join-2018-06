@@ -1,5 +1,7 @@
 <template>
-    $END$
+    <div class="videoPart">
+
+    </div>
 </template>
 
 <script>
@@ -9,5 +11,7 @@
 </script>
 
 <style scoped>
-
+    .videoPart{
+        height: 100%;
+    }
 </style>

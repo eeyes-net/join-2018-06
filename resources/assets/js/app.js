@@ -21,6 +21,7 @@ import home from './views/Home'
 import tempHome from './views/TempHome'
 import market from './views/department/Market'
 import publicrelation from './views/department/PublicRelation'
+import media from './views/department/Media'
 
 Vue.use(VueRouter)
 
@@ -41,6 +42,11 @@ const router = new VueRouter({
             component: publicrelation,
             name: 'publicrelation'
         },
+        {
+            path: '/media',
+            component:  media,
+            name: 'media',
+        }
     ]
 })
 
