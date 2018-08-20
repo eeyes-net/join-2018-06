@@ -77739,7 +77739,7 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(83)
+  __webpack_require__(117)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
@@ -77784,51 +77784,35 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 83 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(84);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("7d73dac8", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a6475dee\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Market.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a6475dee\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Market.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 84 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.market[data-v-a6475dee]{\n    height: 100%;\n    background-color: #ec971f;\n    margin-top: -22px;\n    background-image: url(\"/imgs/market/market.png\");\n    background-size: 160vw auto;\n    background-repeat: no-repeat;\n    background-position:center bottom;\n}\n.market>h2[data-v-a6475dee]{\n    padding-top: 1em;\n    color: #fff;\n}\n.content[data-v-a6475dee]{\n    width: 90%;\n    height: 12em;\n    margin-top: 2em;\n    background:rgba(255, 255, 255, 0.65) none repeat scroll 0 0 !important;\n    border-radius: 4px;\n}\n.market-icon[data-v-a6475dee]{\n    float: left;\n    background-color: #0d3625;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 83 */,
+/* 84 */,
 /* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_market__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(116);
+
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -77845,27 +77829,65 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "Market",
+    name: 'Market',
     data: function data() {
         return {
-            imgSrc: [{
-                check: '/imgs/market/summary_dim.png',
-                checked: '/imgs/market/summary.png'
-            }, {
-                check: '/imgs/market/summary_dim.png',
-                checked: '/imgs/market/summary.png'
-            }, {
-                check: '/imgs/market/summary_dim.png',
-                checked: '/imgs/market/summary.png'
-            }, {
-                check: '/imgs/market/summary_dim.png',
-                checked: '/imgs/market/summary.png'
-            }]
+            currentFeature: 0,
+            changing: false,
+            contentHidden: false,
+            texts: __WEBPACK_IMPORTED_MODULE_1__data_market__["a" /* texts */]
         };
     },
 
-    methods: {}
+    methods: {
+        change: function () {
+            var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(feature) {
+                return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                if (!this.changing) {
+                                    _context.next = 2;
+                                    break;
+                                }
+
+                                return _context.abrupt('return');
+
+                            case 2:
+                                // 切换效果
+                                this.changing = true;
+                                this.contentHidden = true;
+                                _context.next = 6;
+                                return Object(__WEBPACK_IMPORTED_MODULE_2__util__["a" /* sleep */])(500);
+
+                            case 6:
+                                this.currentFeature = feature;
+                                this.contentHidden = false;
+                                _context.next = 10;
+                                return Object(__WEBPACK_IMPORTED_MODULE_2__util__["a" /* sleep */])(500);
+
+                            case 10:
+                                this.changing = false;
+
+                            case 11:
+                            case 'end':
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, this);
+            }));
+
+            function change(_x) {
+                return _ref.apply(this, arguments);
+            }
+
+            return change;
+        }()
+    }
 });
 
 /***/ }),
@@ -77879,32 +77901,150 @@ var render = function() {
   return _c("div", { staticClass: "market" }, [
     _c("h2", { staticClass: "text-center" }, [_vm._v("市场部")]),
     _vm._v(" "),
-    _c("div", { staticClass: "center-block content" }),
+    _c(
+      "div",
+      {
+        staticClass: "center-block content",
+        class: { "content-hidden": _vm.contentHidden }
+      },
+      [
+        _c("p", {
+          domProps: { innerHTML: _vm._s(_vm.texts[_vm.currentFeature]) }
+        })
+      ]
+    ),
     _vm._v(" "),
-    _c("div", [
-      _c("div", { staticClass: "market-icon" }, [
-        _c("img", { attrs: { src: _vm.imgSrc[0].check, alt: "icon" } }),
-        _vm._v("一年总结")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "market-icon" }, [
-        _c("img", { attrs: { src: _vm.imgSrc[0].check, alt: "icon" } }),
-        _vm._v("部门展望")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "market-icon" }, [
-        _c("img", { attrs: { src: _vm.imgSrc[0].check, alt: "icon" } }),
-        _vm._v("未来展望")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "market-icon" }, [
-        _c("img", { attrs: { src: _vm.imgSrc[0].check, alt: "icon" } }),
-        _vm._v("招新需求")
+    _c("div", { staticClass: "market-features-container" }, [
+      _c("div", { staticClass: "market-features" }, [
+        _c(
+          "a",
+          {
+            staticClass: "market-feature",
+            attrs: { href: "javascript:;" },
+            on: {
+              click: function($event) {
+                _vm.change(1)
+              }
+            }
+          },
+          [
+            _c("div", {
+              staticClass: "market-icon",
+              class: { "market-icon-active": _vm.currentFeature == 1 }
+            }),
+            _vm._v(" "),
+            _vm._m(0)
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "market-feature",
+            attrs: { href: "javascript:;" },
+            on: {
+              click: function($event) {
+                _vm.change(2)
+              }
+            }
+          },
+          [
+            _c("div", {
+              staticClass: "market-icon",
+              class: { "market-icon-active": _vm.currentFeature == 2 }
+            }),
+            _vm._v(" "),
+            _vm._m(1)
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "market-feature",
+            attrs: { href: "javascript:;" },
+            on: {
+              click: function($event) {
+                _vm.change(3)
+              }
+            }
+          },
+          [
+            _c("div", {
+              staticClass: "market-icon",
+              class: { "market-icon-active": _vm.currentFeature == 3 }
+            }),
+            _vm._v(" "),
+            _vm._m(2)
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "market-feature",
+            attrs: { href: "javascript:;" },
+            on: {
+              click: function($event) {
+                _vm.change(4)
+              }
+            }
+          },
+          [
+            _c("div", {
+              staticClass: "market-icon",
+              class: { "market-icon-active": _vm.currentFeature == 4 }
+            }),
+            _vm._v(" "),
+            _vm._m(3)
+          ]
+        )
       ])
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "market-feature-text" }, [
+      _vm._v("一年"),
+      _c("br"),
+      _vm._v("总结")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "market-feature-text" }, [
+      _vm._v("部门"),
+      _c("br"),
+      _vm._v("特色")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "market-feature-text" }, [
+      _vm._v("未来"),
+      _c("br"),
+      _vm._v("展望")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "market-feature-text" }, [
+      _vm._v("招新"),
+      _c("br"),
+      _vm._v("需求")
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -78000,7 +78140,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.public-relation {\n  width: 100%;\n  height: 100%;\n  background: url(\"/imgs/publicrelation/bg.jpg\");\n  background-size: 100% 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.public-relation .title {\n    color: #fff;\n    text-align: center;\n}\n.public-relation .intro-container {\n    background: url(\"/imgs/publicrelation/map.png\");\n    background-size: auto 100%;\n}\n.public-relation .intro-card {\n    position: relative;\n    margin: 5px auto;\n    min-width: 300px;\n    max-width: 400px;\n    height: 220px;\n    padding: 5px 12px;\n    border-radius: 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    -webkit-box-shadow: 0 0 16px #666;\n            box-shadow: 0 0 16px #666;\n    background: rgba(255, 255, 255, 0.65);\n    color: #000;\n}\n.public-relation .intro-content {\n    height: 100%;\n    padding-top: 10px;\n    overflow: scroll;\n    -webkit-transition: opacity 1s;\n    transition: opacity 1s;\n    opacity: 1;\n}\n.public-relation .intro-hidden {\n    opacity: 0;\n}\n.public-relation .intro-title {\n    margin: 0;\n    text-align: center;\n}\n.public-relation .stage {\n    position: relative;\n    top: 25px;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    min-width: 300px;\n    max-width: 400px;\n    background: url(\"/imgs/publicrelation/podium.png\") no-repeat;\n    background-position: center bottom;\n}\n.public-relation .micro {\n    position: absolute;\n    bottom: 0;\n    -webkit-transition: -webkit-transform 1s;\n    transition: -webkit-transform 1s;\n    transition: transform 1s;\n    transition: transform 1s, -webkit-transform 1s;\n}\n.public-relation .micro-left {\n    left: -60px;\n    z-index: 11;\n}\n.public-relation .micro-mid {\n    left: 50px;\n    z-index: 10;\n}\n.public-relation .micro-right {\n    left: 200px;\n    z-index: 12;\n}\n.public-relation .left-active .micro-left {\n    -webkit-transform: translateX(90px) translateY(-30px);\n            transform: translateX(90px) translateY(-30px);\n}\n.public-relation .left-active .micro-mid {\n    -webkit-transform: translateX(70px);\n            transform: translateX(70px);\n}\n.public-relation .left-active .micro-right {\n    -webkit-transform: translateX(50px) translateY(10px);\n            transform: translateX(50px) translateY(10px);\n}\n.public-relation .mid-active .micro-left {\n    -webkit-transform: translateX(10px);\n            transform: translateX(10px);\n}\n.public-relation .mid-active .micro-mid {\n    -webkit-transform: translateY(-40px);\n            transform: translateY(-40px);\n}\n.public-relation .mid-active .micro-right {\n    -webkit-transform: translateX(-10px);\n            transform: translateX(-10px);\n}\n.public-relation .right-active .micro-left {\n    -webkit-transform: translateX(-40px);\n            transform: translateX(-40px);\n}\n.public-relation .right-active .micro-mid {\n    -webkit-transform: translateX(-50px) translateY(-10px);\n            transform: translateX(-50px) translateY(-10px);\n}\n.public-relation .right-active .micro-right {\n    -webkit-transform: translateX(-80px) translateY(-30px);\n            transform: translateX(-80px) translateY(-30px);\n}\n", ""]);
+exports.push([module.i, "\n.public-relation {\n  width: 100%;\n  height: 100%;\n  background: url(\"/imgs/publicrelation/bg.jpg\");\n  background-size: 100% 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.public-relation .title {\n    color: #fff;\n    text-align: center;\n}\n.public-relation .intro-container {\n    background: url(\"/imgs/publicrelation/map.png\");\n    background-size: auto 100%;\n}\n.public-relation .intro-card {\n    position: relative;\n    margin: 5px auto;\n    min-width: 300px;\n    max-width: 400px;\n    height: 220px;\n    padding: 5px 12px;\n    border-radius: 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    -webkit-box-shadow: 0 0 16px #666;\n            box-shadow: 0 0 16px #666;\n    background: rgba(255, 255, 255, 0.65);\n    color: #000;\n}\n.public-relation .intro-content {\n    height: 100%;\n    padding-top: 10px;\n    overflow-x: hidden;\n    overflow-y: scroll;\n    -webkit-transition: opacity .5s;\n    transition: opacity .5s;\n    opacity: 1;\n}\n.public-relation .intro-hidden {\n    opacity: 0;\n}\n.public-relation .intro-title {\n    margin: 0;\n    text-align: center;\n}\n.public-relation .stage {\n    position: relative;\n    top: 25px;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    min-width: 300px;\n    max-width: 400px;\n    background: url(\"/imgs/publicrelation/podium.png\") no-repeat;\n    background-position: center bottom;\n}\n.public-relation .micro {\n    position: absolute;\n    bottom: 0;\n    -webkit-transition: -webkit-transform 1s;\n    transition: -webkit-transform 1s;\n    transition: transform 1s;\n    transition: transform 1s, -webkit-transform 1s;\n}\n.public-relation .micro-left {\n    left: -60px;\n    z-index: 11;\n}\n.public-relation .micro-mid {\n    left: 50px;\n    z-index: 10;\n}\n.public-relation .micro-right {\n    left: 200px;\n    z-index: 12;\n}\n.public-relation .left-active .micro-left {\n    -webkit-transform: translateX(90px) translateY(-30px);\n            transform: translateX(90px) translateY(-30px);\n}\n.public-relation .left-active .micro-mid {\n    -webkit-transform: translateX(70px);\n            transform: translateX(70px);\n}\n.public-relation .left-active .micro-right {\n    -webkit-transform: translateX(50px) translateY(10px);\n            transform: translateX(50px) translateY(10px);\n}\n.public-relation .mid-active .micro-left {\n    -webkit-transform: translateX(10px);\n            transform: translateX(10px);\n}\n.public-relation .mid-active .micro-mid {\n    -webkit-transform: translateY(-40px);\n            transform: translateY(-40px);\n}\n.public-relation .mid-active .micro-right {\n    -webkit-transform: translateX(-10px);\n            transform: translateX(-10px);\n}\n.public-relation .right-active .micro-left {\n    -webkit-transform: translateX(-40px);\n            transform: translateX(-40px);\n}\n.public-relation .right-active .micro-mid {\n    -webkit-transform: translateX(-50px) translateY(-10px);\n            transform: translateX(-50px) translateY(-10px);\n}\n.public-relation .right-active .micro-right {\n    -webkit-transform: translateX(-80px) translateY(-30px);\n            transform: translateX(-80px) translateY(-30px);\n}\n", ""]);
 
 // exports
 
@@ -78014,6 +78154,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_publicrelation__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(116);
 
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
@@ -78052,11 +78193,6 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 
-function sleep(time) {
-    return new Promise(function (resolve) {
-        setTimeout(resolve, time);
-    });
-}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'PublicRelation',
@@ -78103,7 +78239,7 @@ function sleep(time) {
                                 this.introHidden = true;
                                 this.page = page;
                                 _context.next = 7;
-                                return sleep(1000);
+                                return Object(__WEBPACK_IMPORTED_MODULE_2__util__["a" /* sleep */])(500);
 
                             case 7:
                                 this.textItem = __WEBPACK_IMPORTED_MODULE_1__data_publicrelation__["a" /* texts */].find(function (item) {
@@ -78111,7 +78247,7 @@ function sleep(time) {
                                 });
                                 this.introHidden = false;
                                 _context.next = 11;
-                                return sleep(1000);
+                                return Object(__WEBPACK_IMPORTED_MODULE_2__util__["a" /* sleep */])(500);
 
                             case 11:
                                 this.changing = false;
@@ -78920,6 +79056,9 @@ if (hadRuntime) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return texts; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(115);
+
+
 var text1 = '公共关系部主要负责与学校其它社团、组织进行对接并对它们的线上宣传需求给予支持，促进e瞳网与这些社团组织的关系良好发展。目前，公关部还协助教务处对国际交流项目的线上推广。';
 
 var text2 = '1.主要方向\n\
@@ -78940,26 +79079,22 @@ var text4 = '去年工作:\n\
 (2)采访是公关必备技能，现在没有采访经验也没关系，部门有定期培训让学姐带你走进采访的世界。\n\
 (3)培训还包括微信排版，杂志的制作及各种学习能力的提升。教务处的任务会有更新，我们需要掌握学习未知事物的能力，才能成为合格的公关。';
 
-function parse(text) {
-    return text.split('\n').join('<br>');
-}
-
 var texts = [{
     title: '简介',
     page: 1,
-    text: parse(text1)
+    text: Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text1)
 }, {
     title: '工作特点',
     page: 2,
-    text: parse(text2)
+    text: Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text2)
 }, {
     title: '招新需求',
     page: 3,
-    text: parse(text3)
+    text: Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text3)
 }, {
     title: '工作介绍',
     page: 4,
-    text: parse(text4)
+    text: Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text4)
 }];
 
 /***/ }),
@@ -79170,7 +79305,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.media-part[data-v-fa1ca4b2] {\n  height: 100%;\n  padding-left: 3em;\n  padding-right: 3em;\n  background: url(\"/imgs/media/media.png\");\n  color: #000;\n}\n.media-part h1[data-v-fa1ca4b2] {\n    font-size: 4em;\n}\n.media-part h1 span[data-v-fa1ca4b2] {\n      font-size: 0.3em;\n      -webkit-writing-mode: vertical-rl;\n      -ms-writing-mode: tb-rl;\n          writing-mode: vertical-rl;\n}\n.media-part div > p[data-v-fa1ca4b2] {\n    margin-bottom: 0;\n    padding-right: 1em;\n}\n.media-instruc[data-v-fa1ca4b2] {\n  font-size: 1.7em;\n}\n.media-content[data-v-fa1ca4b2] {\n  margin-top: 1.2em;\n  border: 1px solid #000;\n  padding: 12px;\n}\n.media-content .media-box[data-v-fa1ca4b2] {\n    border: 1px solid #000;\n}\n.media-content .media-box div[data-v-fa1ca4b2] {\n      padding-bottom: 2em;\n}\n.media-content .media-box div p[data-v-fa1ca4b2] {\n        margin-bottom: 6px;\n}\n", ""]);
+exports.push([module.i, "\n.media-part[data-v-fa1ca4b2] {\n  height: 100%;\n  padding-left: 3em;\n  padding-right: 3em;\n  background: url(\"/imgs/media/bg.jpg\") 100px 100px;\n  color: #000;\n}\n.media-part h1[data-v-fa1ca4b2] {\n    font-size: 4em;\n}\n@media screen and (max-width: 345px) {\n.media-part h1[data-v-fa1ca4b2] {\n        font-size: 3.5em;\n}\n}\n.media-part h1 span[data-v-fa1ca4b2] {\n      font-size: 0.3em;\n      -webkit-writing-mode: vertical-rl;\n      -ms-writing-mode: tb-rl;\n          writing-mode: vertical-rl;\n}\n.media-part div > p[data-v-fa1ca4b2] {\n    margin-bottom: 0;\n    padding-right: 1em;\n}\n.media-instruc[data-v-fa1ca4b2] {\n  font-size: 1.6em;\n}\n@media screen and (max-width: 345px) {\n.media-instruc[data-v-fa1ca4b2] {\n      font-size: 1.4em;\n}\n}\n.media-content[data-v-fa1ca4b2] {\n  margin-top: 1.2em;\n  border: 1px solid #000;\n  padding: 12px;\n}\n.media-content .media-box[data-v-fa1ca4b2] {\n    border: 1px solid #000;\n    text-align: center;\n}\n.media-content .media-box div[data-v-fa1ca4b2] {\n      padding-bottom: 2em;\n}\n@media screen and (max-width: 345px) {\n.media-content .media-box div[data-v-fa1ca4b2] {\n          padding-bottom: 1.2em;\n}\n}\n.media-content .media-box div p[data-v-fa1ca4b2] {\n        margin-bottom: 6px;\n}\n@media screen and (max-width: 345px) {\n.media-content .media-box div p[data-v-fa1ca4b2] {\n            font-size: .9em;\n}\n}\n.media-content .media-box-hr[data-v-fa1ca4b2] {\n    width: 80%;\n    border-top: 1px solid #000;\n}\n@media screen and (max-width: 345px) {\n.media-content .media-box-hr[data-v-fa1ca4b2] {\n        margin: 12px auto;\n}\n}\n.footer[data-v-fa1ca4b2] {\n  margin: 20px 0 0;\n}\n", ""]);
 
 // exports
 
@@ -79181,6 +79316,9 @@ exports.push([module.i, "\n.media-part[data-v-fa1ca4b2] {\n  height: 100%;\n  pa
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
 //
 //
 //
@@ -79243,49 +79381,32 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "media-content center-block" }, [
         _c("div", { staticClass: "media-box" }, [
-          _c("h3", { staticClass: "text-center" }, [_vm._v("简介")]),
+          _c("h3", [_vm._v("简介")]),
           _vm._v(" "),
-          _c("hr", {
-            staticStyle: {
-              FILTER: "alpha(opacity=100,finishopacity=0,style=3)"
-            },
-            attrs: { width: "80%", size: "3", color: "#000" }
-          }),
+          _c("hr", { staticClass: "media-box-hr" }),
           _vm._v(" "),
           _c("div", [
-            _c("p", { staticClass: "text-center" }, [
-              _vm._v("新闻媒体部是e瞳网对外的平台")
-            ]),
+            _c("p", [_vm._v("新闻媒体部是e瞳网对外的平台")]),
             _vm._v(" "),
-            _c("p", { staticClass: "text-center" }, [
-              _vm._v("也是e瞳网的门面")
-            ]),
+            _c("p", [_vm._v("也是e瞳网的门面")]),
             _vm._v(" "),
-            _c("p", { staticClass: "text-center" }, [
-              _vm._v("我们主要负责公众号的运营")
-            ]),
+            _c("p", [_vm._v("我们主要负责公众号的运营")]),
             _vm._v(" "),
-            _c("p", { staticClass: "text-center" }, [
-              _vm._v("通过文字、影像多维展示学生生活")
-            ]),
+            _c("p", [_vm._v("通过文字、影像多维展示学生生活")]),
             _vm._v(" "),
-            _c("p", { staticClass: "text-center" }, [
-              _vm._v("的同时为学生提供丰富的信息")
-            ]),
+            _c("p", [_vm._v("的同时为学生提供丰富的信息")]),
             _vm._v(" "),
-            _c("p", { staticClass: "text-center" }, [
-              _vm._v("我们着眼于学生的及时需求")
-            ]),
+            _c("p", [_vm._v("我们着眼于学生的及时需求")]),
             _vm._v(" "),
-            _c("p", { staticClass: "text-center" }, [
-              _vm._v("关注交大校内外时事新闻")
-            ]),
+            _c("p", [_vm._v("关注交大校内外时事新闻")]),
             _vm._v(" "),
-            _c("p", { staticClass: "text-center" }, [
-              _vm._v("探索学校内鲜为人知建筑与故事")
-            ])
+            _c("p", [_vm._v("探索学校内鲜为人知建筑与故事")])
           ])
         ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "footer text-center" }, [
+        _c("p", [_vm._v("二零一八年八月")])
       ])
     ])
   }
@@ -79540,6 +79661,106 @@ exports.push([module.i, "\n.video-part[data-v-52d02ebe] {\n  width: 100%;\n  hei
 
 // exports
 
+
+/***/ }),
+/* 115 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = parse;
+function parse(text) {
+    return text.split('\n').join('<br>');
+}
+
+/***/ }),
+/* 116 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = sleep;
+function sleep(time) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, time);
+    });
+}
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(118);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("0c98de7c", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a6475dee\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Market.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a6475dee\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Market.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\na[data-v-a6475dee] {\n  text-decoration: none;\n}\n.market[data-v-a6475dee] {\n  height: 100%;\n  background-color: #ec971f;\n  margin-top: -22px;\n  background-image: url(\"/imgs/market/market.png\");\n  background-size: auto 70vh;\n  background-repeat: no-repeat;\n  background-position: center bottom;\n}\n.market h2[data-v-a6475dee] {\n    padding-top: 1em;\n    color: #fff;\n}\n.content[data-v-a6475dee] {\n  width: 90%;\n  max-width: 70vh;\n  height: 12em;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  padding: 1em;\n  overflow-x: hidden;\n  overflow-y: scroll;\n  margin-top: 2em;\n  background: rgba(255, 255, 255, 0.65) none repeat scroll 0 0 !important;\n  border-radius: .8em;\n}\n.content p[data-v-a6475dee] {\n    -webkit-transition: opacity .5s;\n    transition: opacity .5s;\n    opacity: 1;\n}\n.market-features-container[data-v-a6475dee] {\n  position: absolute;\n  width: 100%;\n  height: 22.5vh;\n  bottom: 29.5vh;\n}\n.market-features[data-v-a6475dee] {\n  margin: 0 auto;\n  width: 36.28vh;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.market-feature[data-v-a6475dee] {\n  width: 50%;\n  height: 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.market-icon[data-v-a6475dee] {\n  width: 50px;\n  height: 50px;\n  background: url(\"/imgs/market/icons.png\");\n  background-size: 200px 100px;\n}\n.market-feature:nth-child(1) > .market-icon[data-v-a6475dee] {\n  background-position: 0 0;\n}\n.market-feature:nth-child(2) > .market-icon[data-v-a6475dee] {\n  background-position: -50px 0;\n}\n.market-feature:nth-child(3) > .market-icon[data-v-a6475dee] {\n  background-position: -100px 0;\n}\n.market-feature:nth-child(4) > .market-icon[data-v-a6475dee] {\n  background-position: -150px 0;\n}\n.market-feature:nth-child(1) > .market-icon-active[data-v-a6475dee] {\n  background-position: 0 50px;\n}\n.market-feature:nth-child(2) > .market-icon-active[data-v-a6475dee] {\n  background-position: -50px 50px;\n}\n.market-feature:nth-child(3) > .market-icon-active[data-v-a6475dee] {\n  background-position: -100px 50px;\n}\n.market-feature:nth-child(4) > .market-icon-active[data-v-a6475dee] {\n  background-position: -150px 50px;\n}\n.market-icon + .market-feature-text[data-v-a6475dee] {\n  color: rgba(255, 255, 255, 0.6);\n}\n.market-icon-active + .market-feature-text[data-v-a6475dee] {\n  color: #fff;\n}\n.content-hidden p[data-v-a6475dee] {\n  opacity: 0;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 119 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return texts; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(115);
+
+
+var text0 = '策划一次亲自主导的活动？完成一份漂亮的策划文案？在展示台上摆出一份漂亮的ppt并侃侃而谈？市场部给你平台绽放你的光彩！\n\
+我们有从不正经但是很可爱的主管，有一样怀揣着梦想的员工，有不定时的饭局夜宵。\n\
+这里有e瞳家文化的传承\n\
+这里，将是你在交大的另一个温暖港湾，有力臂膀。';
+
+var text1 = '1.我们开展了关于e瞳网产品的相关推广，e学堂和e快下，都在交大校园中帮助同学更好地去学习\n\
+2.我们策划了几乎所有部门内部的活动，无论是饺子宴，还是春游，都让大家感受到了家的感觉。\n\
+3.我们积极的在校外找寻赞助，为部门建设添砖加瓦\n\
+4.我们相应学校团工委的和习总书记的要求，开展了全校范围的有关寻找西迁记忆的寻宝思源活动';
+
+var text2 = '1.让e瞳已有的产品为大家带来应有的福利\n\
+2.将新的项目“工程坊”做成一系列的活动\n\
+3.努力为部门间的联系策划有意义的活动\n\
+4.开展更多类似于寻宝思源的大型活动，学习和弘扬交大精神、中国精神';
+
+var text3 = '1.在这里，你将无拘无束\n\
+2.在这里，你能够走出宿舍的堕落，见到更多有趣的同学\n\
+3.在这里，你将能练就好的排版和策划\n\
+4.在这里，桌游，夜宵，聚餐从不会缺席\n\
+作为历届最活泼的部门，we are 伐木累！';
+
+var text4 = '1.有良好的交际能力（得会尬聊，哈哈哈）\n\
+2.有走出宿舍的决心，想见见交大不一样的风景\n\
+3.有点word等功底最好啦~没有问题也不大，我们会教你\n\
+4.有责任心，想让大学生活不在只是单调的学习，加入我们吧（我们一起浪~）\n\
+大学，是另一个世界，这里，不在只有学习，这里，还有我们，和你一同成长的人！';
+
+var texts = [Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text0), Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text1), Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text2), Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text3), Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text4)];
 
 /***/ })
 /******/ ]);
