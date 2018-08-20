@@ -9,6 +9,7 @@ import bootstrap from './bootstrap'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueTouch from 'vue-touch'
+Vue.use(VueTouch, { name: 'v-touch' })
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -17,7 +18,7 @@ import VueTouch from 'vue-touch'
  */
 
 import exampleComponent from './components/ExampleComponent'
-import home from './views/Home'
+import home from './views/home'
 import tempHome from './views/TempHome'
 import market from './views/department/Market'
 import publicrelation from './views/department/PublicRelation'
@@ -30,8 +31,8 @@ const router = new VueRouter({
     routes:[
         {
             path: '/',
-            component: tempHome,
-            name: 'tempHome'
+            component: home,
+            name: 'home'
         },
         {
             path: '/market',
