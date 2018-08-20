@@ -45,7 +45,14 @@ const marketPage = {
 }
 
 const techPage = {
-
+    name: '技术',
+    part1: '代码部',
+    part2: '非代码部',
+    src1: '/code',
+    src2: '/nocode',
+    imgSrc: '/imgs/page/technology.png',
+    color: '#37CBC1',
+    info: 'e瞳网是西交最大的互联网社团，而e瞳网技术部门则是卧虎藏龙之地，这里有统帅全局的产品经理，奇思妙想的设计师，技术高超的web艺术家，沉迷代码的数据达人。App，网页，网站，手机游戏，这里催生了一个又一个的精妙的互联网产品，磨砺了一批又一批勤勉奋斗的e瞳人。这里是你互联网技术萌芽的开端。无论你是想要成为技术大佬，还是想要实现自己的创意与灵感，这便是起点。\n'
 }
 
 export const pageData = {

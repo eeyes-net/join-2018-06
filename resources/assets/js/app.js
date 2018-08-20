@@ -25,6 +25,8 @@ import media from './views/department/Media'
 import video from './views/department/Video'
 import page from './components/Page'
 import { pageData } from './views/data/page'
+import code from './views/department/Code'
+import noCode from './views/department/NoCode'
 
 Vue.use(VueRouter)
 
@@ -67,9 +69,25 @@ const router = new VueRouter({
             component: page,
             props: {
                 part:pageData.marketPage
+            },
+        },
+        {
+            path: '/page/tech',
+            component: page,
+            props: {
+                part:pageData.techPage
             }
         },
-
+        {
+            path: '/code',
+            component: code,
+            name: 'code',
+        },
+        {
+            path: '/nocode',
+            component: noCode,
+            name: 'nocode',
+        }
     ]
 })
 
