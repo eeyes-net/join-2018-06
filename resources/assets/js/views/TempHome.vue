@@ -54,14 +54,16 @@ export default {
             playerOptions: {
                 muted: true,
                 language: 'zh',
-                playbackRates: [0.5, 1.0, 1.5, 2.0],
+                playbackRates: [],
                 sources: [
                     {
                         type: 'video/mp4',
-                        src: '/videos/home_eeyes_intro_480p.mp4'
+                        src: '/videos/home_eeyes_intro.webm'
                     },
-                ]
-            }
+                ],
+
+            },
+            pageTurned: true,
         }
     }
 }

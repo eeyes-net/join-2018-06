@@ -28,8 +28,8 @@ const router = new VueRouter({
     routes:[
         {
             path: '/',
-            component: home,
-            name: 'home'
+            component: tempHome,
+            name: 'tempHome'
         },
         {
             path: '/market',
