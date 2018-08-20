@@ -154,9 +154,7 @@ body {
 }
 /* 页脚 */
 .footer {
-    position: fixed;
     width: 100%;
-    bottom: 0;
     opacity: 1;
     transition: 1s;
 }
