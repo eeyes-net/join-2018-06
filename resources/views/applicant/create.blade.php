@@ -76,7 +76,7 @@
                     <div class="field">
                         <label for="birthday">出生日期：</label>
                         <div class="input-append date" id="datetimepicker" data-date="2000-01-01" data-date-format="yyyy-mm-dd">
-                            <input class="span2" size="16" type="text" name="birthday" value="2000-01-01">
+                            <input class="form-control" size="16" type="text" name="birthday" value="2000-01-01">
                             <span class="add-on"><i class="icon-th"></i></span>
                         </div>
                         {{--<input class="form-control" id="birthday" type="text" name="birthday" @auth value="{{ Auth::user()->birthday->toDateString() }}" @endauth>--}}
