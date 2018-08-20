@@ -3,14 +3,14 @@
         <h2 class="title">2018公关部招新<br>新闻发布会</h2>
         <div class="intro-container container">
             <div class="intro-card">
-                <h4>简介</h4>
+                <h4 class="intro-title">简介</h4>
                 <p>公共关系部主要负责与学校其它社团、组织进行对接并对它们的线上宣传需求给予支持，促进e瞳网与这些社团组织的关系良好发展。目前，公关部还协助教务处对国际交流项目的线上推广。</p>
             </div>
         </div>
         <div class="stage">
-            <div class="micro micro-left"></div>
-            <div class="micro micro-mid"></div>
-            <div class="micro micro-right"></div>
+            <img class="micro micro-left" src="/imgs/publicrelation/micro_left.png">
+            <img class="micro micro-mid" src="/imgs/publicrelation/micro_mid.png">
+            <img class="micro micro-right" src="/imgs/publicrelation/micro_right.png">
         </div>
     </div>
 </template>
@@ -32,6 +32,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .title {
+        color: #fff;
+        text-align: center;
+    }
     // 外部加一层容器放背景地图
     .intro-container {
         background: url('/imgs/publicrelation/map.png');
@@ -44,32 +48,39 @@ export default {
         padding: 5px 12px;
         border-radius: 10px;
         box-sizing: border-box;
-        box-shadow: 0 0 16px #333;
+        box-shadow: 0 0 16px #666;
+        background: rgba(#fff, .65);
+        color: #000;
+    }
+    .intro-title {
+        text-align: center;
     }
     // 舞台，以演讲台为背景
     .stage {
         position: relative;
+        top: 25px;
         flex-grow: 1;
+        min-width: 300px;
         max-width: 400px;
-        background: url('/imgs/publicrelation/podium.png');
+        background: url('/imgs/publicrelation/podium.png') no-repeat;
         background-position: center bottom;
     }
     // 3个麦克风
     .micro {
         position: absolute;
-        background-position-y: bottom;
+        bottom: 0;
     }
     .micro-left {
-        background: url('/imgs/publicrelation/micro_left.png');
-        background-position-x: 0;
+        left: -60px;
+        z-index: 11;
     }
     .micro-mid {
-        background: url('/imgs/publicrelation/micro_mid.png');
-        background-position-x: 200px;
+        left: 50px;
+        z-index: 10;
     }
     .micro-right {
-        background: url('/imgs/publicrelation/micro_right.png');
-        background-position-x: 400px;
+        left: 200px;
+        z-index: 12;
     }
 }
 </style>

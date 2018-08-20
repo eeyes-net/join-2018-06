@@ -37,6 +37,7 @@
         padding-left: 3em;
         padding-right: 3em;
         background: url("/imgs/media/media.png");
+        color: #000;
         h1{
             font-size: 4em;
             span{
