@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="col-md-8">
+    <div class="col-md-10 col-lg-offset-1">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h5>当前报名用户</h5>
