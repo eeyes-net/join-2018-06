@@ -77933,7 +77933,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n.public-relation {\n  width: 100%;\n  height: 100%;\n  background: url(\"/imgs/publicrelation/bg.jpg\");\n  background-size: 100% 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.public-relation .intro-container {\n    background: url(\"/imgs/publicrelation/map.png\");\n    background-size: auto 100%;\n}\n.public-relation .intro-card {\n    margin: 5px auto;\n    max-width: 400px;\n    padding: 5px 12px;\n    border-radius: 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    -webkit-box-shadow: 0 0 16px #333;\n            box-shadow: 0 0 16px #333;\n}\n.public-relation .stage {\n    position: relative;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    max-width: 400px;\n    background: url(\"/imgs/publicrelation/podium.png\");\n    background-position: center bottom;\n}\n.public-relation .micro {\n    position: absolute;\n    background-position-y: bottom;\n}\n.public-relation .micro-left {\n    background: url(\"/imgs/publicrelation/micro_left.png\");\n    background-position-x: 0;\n}\n.public-relation .micro-mid {\n    background: url(\"/imgs/publicrelation/micro_mid.png\");\n    background-position-x: 200px;\n}\n.public-relation .micro-right {\n    background: url(\"/imgs/publicrelation/micro_right.png\");\n    background-position-x: 400px;\n}\n", ""]);
+exports.push([module.i, "\n.public-relation {\n  width: 100%;\n  height: 100%;\n  background: url(\"/imgs/publicrelation/bg.jpg\");\n  background-size: 100% 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.public-relation .title {\n    color: #fff;\n    text-align: center;\n}\n.public-relation .intro-container {\n    background: url(\"/imgs/publicrelation/map.png\");\n    background-size: auto 100%;\n}\n.public-relation .intro-card {\n    margin: 5px auto;\n    max-width: 400px;\n    padding: 5px 12px;\n    border-radius: 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    -webkit-box-shadow: 0 0 16px #666;\n            box-shadow: 0 0 16px #666;\n    background: rgba(255, 255, 255, 0.65);\n    color: #000;\n}\n.public-relation .intro-title {\n    text-align: center;\n}\n.public-relation .stage {\n    position: relative;\n    top: 25px;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    min-width: 300px;\n    max-width: 400px;\n    background: url(\"/imgs/publicrelation/podium.png\") no-repeat;\n    background-position: center bottom;\n}\n.public-relation .micro {\n    position: absolute;\n    bottom: 0;\n}\n.public-relation .micro-left {\n    left: -60px;\n    z-index: 11;\n}\n.public-relation .micro-mid {\n    left: 50px;\n    z-index: 10;\n}\n.public-relation .micro-right {\n    left: 200px;\n    z-index: 12;\n}\n", ""]);
 
 // exports
 
@@ -77990,7 +77990,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "intro-container container" }, [
         _c("div", { staticClass: "intro-card" }, [
-          _c("h4", [_vm._v("简介")]),
+          _c("h4", { staticClass: "intro-title" }, [_vm._v("简介")]),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -78001,11 +78001,20 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "stage" }, [
-        _c("div", { staticClass: "micro micro-left" }),
+        _c("img", {
+          staticClass: "micro micro-left",
+          attrs: { src: "/imgs/publicrelation/micro_left.png" }
+        }),
         _vm._v(" "),
-        _c("div", { staticClass: "micro micro-mid" }),
+        _c("img", {
+          staticClass: "micro micro-mid",
+          attrs: { src: "/imgs/publicrelation/micro_mid.png" }
+        }),
         _vm._v(" "),
-        _c("div", { staticClass: "micro micro-right" })
+        _c("img", {
+          staticClass: "micro micro-right",
+          attrs: { src: "/imgs/publicrelation/micro_right.png" }
+        })
       ])
     ])
   }
