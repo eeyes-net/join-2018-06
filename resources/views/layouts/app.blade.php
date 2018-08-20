@@ -16,6 +16,7 @@
 </head>
 <body>
     <div id="app" class="{{ route_class() }}">
+        @include('shared._message')
         @yield('content')
     </div>
 

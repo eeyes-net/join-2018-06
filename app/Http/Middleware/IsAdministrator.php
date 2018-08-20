@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\Finder\Exception\AccessDeniedException;
 
 class IsAdministrator
 {
@@ -14,14 +15,13 @@ class IsAdministrator
      * @param  \Illuminate\Http\Request $request
      * @param  \Closure $next
      * @return mixed
-     * @throws AuthorizationException
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && in_array(Auth::user()->username, config('admin')))
+        if (Auth::check() && Auth::user()->role == 'admin')
         {
             return $next($request);
         }
-        throw new AuthorizationException("您不是管理员");
+        throw new AccessDeniedException("您不是管理员");
     }
 }
