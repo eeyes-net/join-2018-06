@@ -15,7 +15,7 @@
     @yield('styles')
 </head>
 <body>
-    <div id="app" class="{{ route_class() }}">
+    <div id="app" class="{{ route_class() }} container">
         @yield('content')
     </div>
 

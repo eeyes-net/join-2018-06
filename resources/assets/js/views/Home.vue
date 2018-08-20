@@ -15,6 +15,7 @@
                 <!-- 第二个页面 -->
                 <div class="container">
                     <div class="cabinet-container">
+                        <router-link to="/market">市场部</router-link>
                         <img class="join-cabinet" src="imgs/home_cabinet.png" alt="部门选择">
                         <div class="join-line"></div>
                         <a href="javascript:;" @click="submit()">
