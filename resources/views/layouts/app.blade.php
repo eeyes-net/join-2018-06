@@ -15,8 +15,12 @@
     @yield('styles')
 </head>
 <body>
+<<<<<<< HEAD
     <div id="app" class="{{ route_class() }}">
         @include('shared._message')
+=======
+    <div id="app" class="{{ route_class() }} container">
+>>>>>>> a47f9e8ef7528eea3ff1f9d100c33f8882b506dd
         @yield('content')
     </div>
 

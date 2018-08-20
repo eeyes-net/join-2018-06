@@ -14,5 +14,5 @@ body,
 @endsection
 
 @section('content')
-<temp-home></temp-home>
+<router-view></router-view>
 @endsection

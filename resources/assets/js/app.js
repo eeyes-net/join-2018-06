@@ -5,12 +5,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-
-window.Vue = require('vue');
-
-const VueTouch = require('vue-touch');
-Vue.use(VueTouch, { name: 'v-touch' });
+import bootstrap from './bootstrap'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import VueTouch from 'vue-touch'
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -18,10 +16,28 @@ Vue.use(VueTouch, { name: 'v-touch' });
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-// Vue.component('home', require('./views/Home.vue'));
-Vue.component('temp-home', require('./views/TempHome.vue'));
+import exampleComponent from './components/ExampleComponent'
+import home from './views/Home'
+import tempHome from './views/TempHome'
+import market from './views/department/Market'
 
-const app = new Vue({
-    el: '#app'
-});
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+    routes:[
+        {
+            path: '/',
+            component: home,
+            name: 'home'
+        },
+        {
+            path: '/market',
+            component: market,
+            name: 'market'
+        }
+    ]
+})
+
+new Vue({
+    router
+}).$mount('#app');
