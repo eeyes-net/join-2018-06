@@ -21,6 +21,8 @@ import home from './views/Home'
 import tempHome from './views/TempHome'
 import market from './views/department/Market'
 import publicrelation from './views/department/PublicRelation'
+import media from './views/department/Media'
+import video from './views/department/Video'
 
 Vue.use(VueRouter)
 
@@ -28,8 +30,8 @@ const router = new VueRouter({
     routes:[
         {
             path: '/',
-            component: home,
-            name: 'home'
+            component: tempHome,
+            name: 'tempHome'
         },
         {
             path: '/market',
@@ -41,6 +43,16 @@ const router = new VueRouter({
             component: publicrelation,
             name: 'publicrelation'
         },
+        {
+            path: '/media',
+            component:  media,
+            name: 'media',
+        },
+        {
+            path: '/video',
+            component: video,
+            name: 'video',
+        }
     ]
 })
 

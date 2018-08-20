@@ -10,7 +10,6 @@
                 <h1 class="title">加入我们</h1>
                 <div class="video-box">
                     <videoPlayer :options="playerOptions"></videoPlayer>
-                    <!-- <video src="videos/home_eeyes_intro.mp4" controls="controls"></video> -->
                 </div>
                 <p class="products-title">我们的产品</p>
                 <div class="products">
@@ -54,14 +53,16 @@ export default {
             playerOptions: {
                 muted: true,
                 language: 'zh',
-                playbackRates: [0.5, 1.0, 1.5, 2.0],
+                playbackRates: [],
                 sources: [
                     {
                         type: 'video/mp4',
-                        src: '/videos/home_eeyes_intro_480p.mp4'
+                        src: '/videos/home_eeyes_intro.webm'
                     },
-                ]
-            }
+                ],
+
+            },
+            pageTurned: true,
         }
     }
 }
@@ -163,4 +164,8 @@ body {
     text-align: center;
     font-size: .6em;
 }
+.vjs_video_3-dimensions{
+        width: 320px;
+        height: 180px;
+    }
 </style>
