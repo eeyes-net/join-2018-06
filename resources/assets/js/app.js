@@ -23,6 +23,8 @@ import market from './views/department/Market'
 import publicrelation from './views/department/PublicRelation'
 import media from './views/department/Media'
 import video from './views/department/Video'
+import page from './components/Page'
+import { pageData } from './views/data/page'
 
 Vue.use(VueRouter)
 
@@ -52,7 +54,22 @@ const router = new VueRouter({
             path: '/video',
             component: video,
             name: 'video',
-        }
+        },
+        {
+            path: '/page/info',
+            component: page,
+            props: {
+                part:pageData.infoPage
+            },
+        },
+        {
+            path: '/page/market',
+            component: page,
+            props: {
+                part:pageData.marketPage
+            }
+        },
+
     ]
 })
 

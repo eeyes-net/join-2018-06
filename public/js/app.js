@@ -1432,6 +1432,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__views_department_Media___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__views_department_Media__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__views_department_Video__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__views_department_Video___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__views_department_Video__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Page__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Page___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_Page__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__views_data_page__ = __webpack_require__(125);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -1449,6 +1452,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
+
 
 
 
@@ -1481,6 +1486,18 @@ var router = new __WEBPACK_IMPORTED_MODULE_2_vue_router__["a" /* default */]({
         path: '/video',
         component: __WEBPACK_IMPORTED_MODULE_10__views_department_Video___default.a,
         name: 'video'
+    }, {
+        path: '/page/info',
+        component: __WEBPACK_IMPORTED_MODULE_11__components_Page___default.a,
+        props: {
+            part: __WEBPACK_IMPORTED_MODULE_12__views_data_page__["a" /* pageData */].infoPage
+        }
+    }, {
+        path: '/page/market',
+        component: __WEBPACK_IMPORTED_MODULE_11__components_Page___default.a,
+        props: {
+            part: __WEBPACK_IMPORTED_MODULE_12__views_data_page__["a" /* pageData */].marketPage
+        }
     }]
 });
 
@@ -79761,6 +79778,229 @@ var text4 = '1.有良好的交际能力（得会尬聊，哈哈哈）\n\
 大学，是另一个世界，这里，不在只有学习，这里，还有我们，和你一同成长的人！';
 
 var texts = [Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text0), Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text1), Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text2), Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text3), Object(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* parse */])(text4)];
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(121)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(123)
+/* template */
+var __vue_template__ = __webpack_require__(124)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-0d3d7106"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\Page.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0d3d7106", Component.options)
+  } else {
+    hotAPI.reload("data-v-0d3d7106", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(122);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("654865c5", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0d3d7106\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Page.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0d3d7106\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Page.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.page-second[data-v-0d3d7106]{\n    width: 100%;\n}\n.title[data-v-0d3d7106]{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    margin-top: 2em;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    height: 13em;\n}\n.part[data-v-0d3d7106]{\n    font-size: 2.8em;\n    -webkit-writing-mode: vertical-rl;\n    -ms-writing-mode: tb-rl;\n        writing-mode: vertical-rl;\n}\n.part>a[data-v-0d3d7106]{\n    color: #000;\n}\n.content-part[data-v-0d3d7106]{\n    padding: 1.6em;\n    font-size: 1em;\n    color: #fff;\n}\n@media screen and (min-width: 335px) {\n.content-part[data-v-0d3d7106]{\n        padding: 2em;\n        font-size: 1.1em;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 123 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "Page",
+    props: {
+        part: Object
+    }
+});
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "page-second container",
+      style: { backgroundColor: _vm.part.color, color: "#fff" }
+    },
+    [
+      _c("h1", { staticClass: "text-center" }, [_vm._v(_vm._s(_vm.part.name))]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "row title",
+          style: {
+            backgroundImage: "url(" + _vm.part.imgSrc + ")",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center"
+          }
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "part" },
+            [
+              _c("router-link", { attrs: { to: _vm.part.src1 } }, [
+                _vm._v(_vm._s(_vm.part.part1))
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "part" },
+            [
+              _c("router-link", { attrs: { to: _vm.part.src2 } }, [
+                _vm._v(_vm._s(_vm.part.part2))
+              ])
+            ],
+            1
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "content-part" }, [
+        _vm._v(_vm._s(_vm.part.info))
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-0d3d7106", module.exports)
+  }
+}
+
+/***/ }),
+/* 125 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return pageData; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(115);
+
+
+var infoPage = {
+    name: '信息',
+    part1: '新媒体部',
+    src1: '/media',
+    src2: '/video',
+    part2: '影视部',
+    imgSrc: '/imgs/page/info.png',
+    color: '#5CA6D9',
+    info: '我们由影视部和新闻媒体部组\n' + '成，两个部门共同协作负责e瞳网\n' + '对外和对内的信息传播与内容制\n' + '作。我们以微信和微博媒体为主\n' + '要平台，打造有e瞳特色的文章、\n' + '视频、新闻等栏目产品，你看到\n' + '的精品推送和炫酷视频都是我们\n' + '的杰作。我们既承担着产出e瞳自\n' + '己信息产品的责任，又是和校园\n' + '师生等外界公众双向交流的渠道。我们是e瞳的眼睛，正在以更\n' + '新的技术和更宽广的角度满足公\n' + '众对信息资源的需求。\n'
+};
+
+var marketPage = {
+    name: '市场',
+    part1: '市场部',
+    src1: '/market',
+    src2: '/publicrelation',
+    part2: '公关部',
+    imgSrc: '/imgs/page/market.png',
+    color: '#BA869B',
+    info: '我们由影视部和新闻媒体部组\n' + '成，两个部门共同协作负责e瞳网\n' + '对外和对内的信息传播与内容制\n' + '作。我们以微信和微博媒体为主\n' + '要平台，打造有e瞳特色的文章、\n' + '视频、新闻等栏目产品，你看到\n' + '的精品推送和炫酷视频都是我们\n' + '的杰作。我们既承担着产出e瞳自\n' + '己信息产品的责任，又是和校园\n' + '师生等外界公众双向交流的渠道。我们是e瞳的眼睛，正在以更\n' + '新的技术和更宽广的角度满足公\n' + '众对信息资源的需求。\n'
+};
+
+var techPage = {};
+
+var pageData = {
+    infoPage: infoPage,
+    marketPage: marketPage,
+    techPage: techPage
+};
 
 /***/ })
 /******/ ]);
