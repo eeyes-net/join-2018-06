@@ -54,14 +54,14 @@ export default {
 }
 .whole-pages {
     width: 100%;
-    height: 170vh;
+    height: 140vh;
     color: #fff;
     background: #394244;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
-    transition: 1s;
+    transition: transform 1s;
 }
 .slided {
-    transform: translateY(-70vh);
+    transform: translateY(-40vh);
 }
 .page {
     width: 100%;
@@ -70,6 +70,6 @@ export default {
     height: 100vh;
 }
 .page-join {
-    height: 70vh;
+    height: 40vh;
 }
 </style>

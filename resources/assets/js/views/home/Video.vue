@@ -119,10 +119,10 @@ export default {
 }
 .slided {
     .video {
-        background-position-y: calc(bottom - 10vh);
+        background-position-y: 85vh;
     }
     .entrance-container {
-        transform: translateY(-20vh);
+        transform: translateY(-10vh);
     }
 }
 </style>

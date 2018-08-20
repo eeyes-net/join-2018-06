@@ -33,6 +33,9 @@ $r: 23px;
 
     display: flex;
     flex-direction: row;
+    &:hover {
+        text-decoration: none;
+    }
 }
 .home-button-circle {
     width: 2 * $r;
@@ -60,5 +63,7 @@ $r: 23px;
     text-align: center;
     color: #fff;
     text-shadow: none;
+    outline: none;
+    text-decoration: none;
 }
 </style>
