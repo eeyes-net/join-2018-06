@@ -18,7 +18,24 @@
         name: "Market",
         data () {
           return {
-
+            imgSrc: [
+                {
+                    check:'/imgs/market/summary_dim.png',
+                    checked:'/imgs/market/summary.png',
+                },
+                {
+                    check:'/imgs/market/summary_dim.png',
+                    checked:'/imgs/market/summary.png',
+                },
+                {
+                    check:'/imgs/market/summary_dim.png',
+                    checked:'/imgs/market/summary.png',
+                },
+                {
+                    check:'/imgs/market/summary_dim.png',
+                    checked:'/imgs/market/summary.png',
+                },
+            ]
           }
         },
         methods:{
@@ -33,7 +50,7 @@
         background-color: #ec971f;
         margin-top: -22px;
         background-image: url("/imgs/market/market.png");
-        background-size: 160vw 60vh;
+        background-size: 160vw auto;
         background-repeat: no-repeat;
         background-position:center bottom;
     }

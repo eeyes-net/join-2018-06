@@ -77818,7 +77818,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.market[data-v-a6475dee]{\n    height: 100%;\n    background-color: #ec971f;\n    margin-top: -22px;\n    background-image: url(\"/imgs/market/market.png\");\n    background-size: 160vw 60vh;\n    background-repeat: no-repeat;\n    background-position:center bottom;\n}\n.market>h2[data-v-a6475dee]{\n    padding-top: 1em;\n    color: #fff;\n}\n.content[data-v-a6475dee]{\n    width: 90%;\n    height: 12em;\n    margin-top: 2em;\n    background:rgba(255, 255, 255, 0.65) none repeat scroll 0 0 !important;\n    border-radius: 4px;\n}\n.market-icon[data-v-a6475dee]{\n    float: left;\n    background-color: #0d3625;\n}\n", ""]);
+exports.push([module.i, "\n.market[data-v-a6475dee]{\n    height: 100%;\n    background-color: #ec971f;\n    margin-top: -22px;\n    background-image: url(\"/imgs/market/market.png\");\n    background-size: 160vw auto;\n    background-repeat: no-repeat;\n    background-position:center bottom;\n}\n.market>h2[data-v-a6475dee]{\n    padding-top: 1em;\n    color: #fff;\n}\n.content[data-v-a6475dee]{\n    width: 90%;\n    height: 12em;\n    margin-top: 2em;\n    background:rgba(255, 255, 255, 0.65) none repeat scroll 0 0 !important;\n    border-radius: 4px;\n}\n.market-icon[data-v-a6475dee]{\n    float: left;\n    background-color: #0d3625;\n}\n", ""]);
 
 // exports
 
@@ -77846,12 +77846,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Market",
-  data: function data() {
-    return {};
-  },
+    name: "Market",
+    data: function data() {
+        return {
+            imgSrc: [{
+                check: '/imgs/market/summary_dim.png',
+                checked: '/imgs/market/summary.png'
+            }, {
+                check: '/imgs/market/summary_dim.png',
+                checked: '/imgs/market/summary.png'
+            }, {
+                check: '/imgs/market/summary_dim.png',
+                checked: '/imgs/market/summary.png'
+            }, {
+                check: '/imgs/market/summary_dim.png',
+                checked: '/imgs/market/summary.png'
+            }]
+        };
+    },
 
-  methods: {}
+    methods: {}
 });
 
 /***/ }),
