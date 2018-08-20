@@ -26,7 +26,7 @@ export default {
     // 背景占满屏幕
     width: 100%;
     height: 100%;
-    background: url('/imgs/publicrelation_bg.jpg');
+    background: url('/imgs/publicrelation/bg.jpg');
     background-size: 100% 100%;
     // 纵向flex布局，以便让stage贴近页面底端
     display: flex;
@@ -34,7 +34,7 @@ export default {
     align-items: center;
     // 外部加一层容器放背景地图
     .intro-container {
-        background: url('/imgs/publicrelation_map.png');
+        background: url('/imgs/publicrelation/map.png');
         background-size: auto 100%;
     }
     // 里面用来显示内容
@@ -51,7 +51,7 @@ export default {
         position: relative;
         flex-grow: 1;
         max-width: 400px;
-        background: url('/imgs/publicrelation_podium.png');
+        background: url('/imgs/publicrelation/podium.png');
         background-position: center bottom;
     }
     // 3个麦克风
@@ -60,15 +60,15 @@ export default {
         background-position-y: bottom;
     }
     .micro-left {
-        background: url('/imgs/publicrelation_micro_left.png');
+        background: url('/imgs/publicrelation/micro_left.png');
         background-position-x: 0;
     }
     .micro-mid {
-        background: url('/imgs/publicrelation_micro_mid.png');
+        background: url('/imgs/publicrelation/micro_mid.png');
         background-position-x: 200px;
     }
     .micro-right {
-        background: url('/imgs/publicrelation_micro_right.png');
+        background: url('/imgs/publicrelation/micro_right.png');
         background-position-x: 400px;
     }
 }

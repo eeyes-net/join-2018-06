@@ -20,6 +20,7 @@ import exampleComponent from './components/ExampleComponent'
 import home from './views/Home'
 import tempHome from './views/TempHome'
 import market from './views/department/Market'
+import publicrelation from './views/department/PublicRelation'
 
 Vue.use(VueRouter)
 
@@ -34,7 +35,12 @@ const router = new VueRouter({
             path: '/market',
             component: market,
             name: 'market'
-        }
+        },
+        {
+            path: '/publicrelation',
+            component: publicrelation,
+            name: 'publicrelation'
+        },
     ]
 })
 
