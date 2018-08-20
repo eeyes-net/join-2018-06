@@ -3,17 +3,28 @@
         <h2 class="title">2018公关部招新<br>新闻发布会</h2>
         <div class="intro-container container">
             <div class="intro-card">
-                <div class="intro-content" :class="{ 'intro-hidden': introHidden }">
+                <div class="intro-content"
+                    :class="{'intro-hidden': introHidden }">
                     <h4 class="intro-title">{{ textItem.title }}</h4>
                     <p class="intro-text"
                         v-html="textItem.text"></p>
                 </div>
             </div>
         </div>
-        <div class="stage">
-            <img class="micro micro-left" src="/imgs/publicrelation/micro_left.png">
-            <img class="micro micro-mid" src="/imgs/publicrelation/micro_mid.png">
-            <img class="micro micro-right" src="/imgs/publicrelation/micro_right.png">
+        <div class="stage" :class="{
+                'left-active': page == 2,
+                'mid-active': page == 3,
+                'right-active': page == 4
+            }">
+            <a href="javascript:;" @click="change(2)">
+                <img class="micro micro-left" src="/imgs/publicrelation/micro_left.png">
+            </a>
+            <a href="javascript:;" @click="change(3)">
+                <img class="micro micro-mid" src="/imgs/publicrelation/micro_mid.png">
+            </a>
+            <a href="javascript:;" @click="change(4)">
+                <img class="micro micro-right" src="/imgs/publicrelation/micro_right.png">
+            </a>
         </div>
     </div>
 </template>
@@ -38,7 +49,7 @@ export default {
         }
     },
     beforeMount () {
-        this.textItem = texts.find(item => item.page == 1)
+        this.textItem = texts.find(item => item.page == this.page)
     },
     mounted () {
         window.debug = () => {
@@ -54,6 +65,7 @@ export default {
             // 切换效果
             this.changing = true
             this.introHidden = true
+            this.page = page
             await sleep(1000)
             this.textItem = texts.find(item => item.page == page)
             this.introHidden = false
@@ -128,6 +140,7 @@ export default {
     .micro {
         position: absolute;
         bottom: 0;
+        transition: transform 1s;
     }
     .micro-left {
         left: -60px;
@@ -140,6 +153,40 @@ export default {
     .micro-right {
         left: 200px;
         z-index: 12;
+    }
+    // 3个话筒点击以后的效果
+    .left-active {
+        .micro-left {
+            transform: translateX(90px) translateY(-30px);
+        }
+        .micro-mid {
+            transform: translateX(70px);
+        }
+        .micro-right {
+            transform: translateX(50px) translateY(10px);
+        }
+    }
+    .mid-active {
+        .micro-left {
+            transform: translateX(10px);
+        }
+        .micro-mid {
+            transform: translateY(-40px);
+        }
+        .micro-right {
+            transform: translateX(-10px);
+        }
+    }
+    .right-active {
+        .micro-left {
+            transform: translateX(-40px);
+        }
+        .micro-mid {
+            transform: translateX(-50px) translateY(-10px);
+        }
+        .micro-right {
+            transform: translateX(-80px) translateY(-30px);
+        }
     }
 }
 </style>
