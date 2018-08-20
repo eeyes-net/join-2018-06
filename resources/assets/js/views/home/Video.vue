@@ -47,34 +47,28 @@ export default {
     height: 195px;
     box-shadow: -.6em .6em 0 rgba(#000, .15);
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 400px) and (min-height: 500px) {
     .vjs_video_3-dimensions {
         width: 400px;
         height: 260px;
     }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) and (min-height: 600px) {
     .vjs_video_3-dimensions {
         width: 500px;
         height: 325px;
     }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (min-height: 700px) {
     .vjs_video_3-dimensions {
         width: 600px;
         height: 390px;
     }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 700px) and (min-height: 768px) {
     .vjs_video_3-dimensions {
         width: 700px;
         height: 455px;
-    }
-}
-@media screen and (min-width: 800px) {
-    .vjs_video_3-dimensions {
-        width: 800px;
-        height: 520px;
     }
 }
 </style>
@@ -106,6 +100,9 @@ export default {
 
     * {
         margin: 10px 0 30px;
+        @media screen and (max-height: 650px) {
+            margin-bottom: 10px;
+        }
     }
 }
 </style>
