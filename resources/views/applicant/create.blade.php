@@ -134,7 +134,7 @@
                             <option value="宣传单">宣传单</option>
                             <option value="刷楼">学长学姐刷楼</option>
                             <option value="他人介绍">他人介绍</option>
-                            <option value="他人介绍"></option>
+                            <option value="其他">其他</option>
                         </select>
                     </div>
                     <div class="field">

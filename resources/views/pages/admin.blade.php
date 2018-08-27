@@ -7,7 +7,7 @@
                 <h5>当前报名用户</h5>
             </div>
             <div class="panel-body">
-                <table class="table">
+                <table class="table" >
                     <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -18,13 +18,15 @@
                         <th scope="col">书院</th>
                         <th scope="col">专业班级</th>
                         <th scope="col">qq</th>
-                        <th scope="col">第一志愿</th>
-                        <th scope="col">想说的</th>
+                        <th scope="col" style="width: 200px;">第一志愿</th>
+                        <th scope="col" style="width: 200px;">第二志愿</th>
+                        <th scope="col" style="width: 750px;">想说的</th>
+                        <th scope="col" style="width: 200px;">报名时间</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($applicants as $applicant)
-                        <tr>
+                        <tr style="height: 75px;">
                             <th scope="row">{{ $applicant->id }}</th>
                             <td>{{ $applicant->name }}</td>
                             <td>{{ $applicant->gender }}</td>
@@ -34,7 +36,9 @@
                             <td>{{ $applicant->class }}</td>
                             <td>{{ $applicant->qq }}</td>
                             <td>{{ $applicant->first->name }}</td>
+                            <td>{{ $applicant->second->name }}</td>
                             <td>{!! $applicant->wanna_say !!}</td>
+                            <td>{{ $applicant->created_at->toDateTimeString() }}</td>
                         </tr>
                     @endforeach
                     </tbody>

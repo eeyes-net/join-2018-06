@@ -16,6 +16,11 @@ class ApplicantObserver
         {
             $applicant->wanna_say = Purifier::clean($applicant->wanna_say);
         }
+
+        if (strlen($applicant->college) < 4)
+        {
+            $applicant->college = $applicant->college . '书院';
+        }
     }
 
     /**

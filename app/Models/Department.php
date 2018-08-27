@@ -12,7 +12,7 @@ use Carbon\Carbon;
  * @property string $name
  * @property string $description
  * @property string $link
- * @property int $applicant_count
+ * @property int $applicants_count
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * @property array $applicants
